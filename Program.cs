@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 
 using CodificacaoAT.Classes;
 
@@ -6,9 +6,9 @@ string? opcao = "";
 PessoaJuridica metodosPJ =new PessoaJuridica();
 do
 {
-    Console.Clear(); // Limpar o console
+    Console.Clear(); 
 
-    //Exibir o menu
+    
     Console.WriteLine(@"
     
     1 - Cadastrar PJ
@@ -20,7 +20,7 @@ do
 
     switch (opcao)
     {
-        case "1": // Cadastra PJ
+        case "1": 
             PessoaJuridica pj = new PessoaJuridica();
 
             Console.WriteLine("Informe o nome da PJ: ");
@@ -38,14 +38,14 @@ do
             Console.ReadLine();
             break;
 
-        case "2": // Listar PJ
-            // Pedir o nome da PJ
+        case "2":
+        
             Console.WriteLine("Digite o nome da PJ: ");
 
-            // Salvar o nome da PJ que o usuário digitou
+            
             string? nomePJ = Console.ReadLine();
 
-            // Usa o método ler para obter os dados do arquivo
+            
             PessoaJuridica pjLida = metodosPJ.Ler(nomePJ!);
 
             Console.WriteLine($@"
@@ -55,7 +55,7 @@ do
                 Cpnj: {pjLida.CNPJ}
             ");
 
-            // Espera que o usuário digite algum caracter para prosseguir
+            
             Console.Read();
             break;
 
